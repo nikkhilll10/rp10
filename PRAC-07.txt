@@ -1,0 +1,48 @@
+a. Write an R program to learn about Tabulation and related concepts[ Hint: Contingency Tables, Selection of Parts, Conversion]
+Contingency Tables-
+
+# R program to illustrate
+# Contingency Table
+# Creating a data frame
+ df = data.frame ( "Gender" = c("female", "Female", "Male")
+)
+"Name" = c("payal", "ranu", "pratham"),
+0 #
+Creating contingency table from data using table()
+conTable = table (df)
+o/p
+print (conTable)
+
+Selection of Parts-
+# R program to illustrate
+# Contingency Table
+# Creating a data frame
+ "Name" = c("Payal", "Ranu", "Pratham"),
+df = data.frame (
+)
+"Gender" = c("Female", "Female", "Male")
+# Creating contingency table by selecting a column
+conTable = table (df$Name)
+print (conTable)
+ # Creating contingency table by selecting rows print (conTable1)
+o/p
+conTable1 = table(as.matrix(df [2:3, ]))
+Conversion-
+2024 3:28 PM
+# R program to illustrate
+# Contingency Table
+# Creating a matrix
+A = matrix (
+c(1, 2, 4, 1, 5, 6, 2, 4, 7), nrow = 3,
+ncol = 3
+)
+# Converting Matrix objects into tables
+newTable = as.table (A)
+print(newTable)
+
+b. Write an R program to demonstrate various ways of performing Graphical analysis. [Hint: Plots, Special Plots, Storing Graphics]
+#Load ggplot2
+library("ggplot2")
+#create a scatter plot
+ggplot (iris, aes (x = Sepal. Length, y Sepal.width))+
+geom_point (aes (color Species))

@@ -1,0 +1,87 @@
+a. Write an R program to demonstrate various error messages in R Programming
+ as.numeric(c("5", "6", "seven"))
+Warning message:
+NAS introduced by coercion
+"hello" + "world"
+Error in "hello" + "world" non-numeric argument to binary operator
+ f <- function(){
+message("This is a message.")
+ }
+f()
+This is a message.
+
+b. Write an R program to implement Error Handling in R
+[Hint: warning(), stop(),try(), tryCatch(), Calling handlers()]
+Stop(): if (1 != 2)
+stop("something is wrong")
+Error: something is wrong
+
+Warning():
+ squarex <- function(x) {
+ if (is.character (x)) {
+ warning("Converting x to numeric")
+x <- as. numeric(x)
+ } else {
+message("x appears to be numeric")
+}
+ }
+squarex("4")
+
+try():
+print (try(log("a"), TRUE))
+[1] "Error in log(\"a\"): non-numeric argument to mathematical function\n"
+attr(, "class")
+[1] "try-error"
+attr(, "condition")
+<simpleError in log("a"): non-numeric argument to mathematical function>
+tryCatch():
+> # R program illustrating error handling
+> # Applying trycatch
+> trycatch(
++
+# Specifying expression
++
++
+expr = {
++
+1 + 1
++
+print("Everything was fine.")
++
+},
++
+# Specifying error message
+error = function(e) {
+print("There was an error message.")
+},
+warning = function(w) {
+print("There was a warning message."
+},
+finally = {
+print("finally Executed")
+}
+ )
+Calling handlers():
+ # R program illustrating error handling
+# Evaluation of trycatch
+ check <- function(expression) {
+withCallingHandlers (expression,
+warning = function(w) {
+},
+message("warning:\n", w)
+error = function(e) {
+message("error:\n", e)
+},
+finally = {
+message("Completed")
+})
+ }
+ check({10/2})
+Completed
+ check({10/0})
+Completed
+ check({10/'noe'})
+Completed
+error:
+Error in 10/"noe": non-numeric argument to binary operator
+Error in 10/"noe" non-numeric argument to binary operator

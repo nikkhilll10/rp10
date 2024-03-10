@@ -1,0 +1,58 @@
+A) Write an R program to store and access string in R objects (vector, matrix, arrays, data frames, and lists)
+1]Vectors
+string_vector<- c("apple", "banana", "mango")
+ print(string_vector)
+ print(string_vector [3])
+
+2]Matrix
+string_matrix<-matrix(c("Audi", "Buggati", "Bmw", "Toyota"), nrow=2, ncol=2) print(string_matrix)|
+ string_matrix<-matrix(c("Audi", "Buggati", "Bmw", "Toyota"), nrow=2, ncol=2) > print(string_matrix)
+string_matrix<-matrix(c("Audi", "Buggati", "Bmw", "Toyota"), nrow=2, ncol=2) print(string_matrix[1,2])
+ string_matrix<-matrix(c("Audi", "Buggati","Bmw", "Toyota"), nrow=2, ncol=2) > print(string_matrix[1,2])
+
+3]Array
+ string_array<-array(c("Ather", "Jupitar", "Activa", "Access"), dim=c(2,2,2)) > print(string_array)
+ string_array<-array(c("Ather", "Jupitar", "Activa", "Access"), dim=c(2,2,2)) > print(string_array)
+ print(string_array[1,2,1])
+ 
+4]Data Frames
+> string_data_frame<-data.frame(cartoon=c("shinchan","shizuka", "badrinath", "oggy"), quantity=c(5,3,7,2)) > print(string_data_frame)
+ print(string_data_frame Squantity)
+
+5]List
+string_list<-list(fruits=c("apple", "banana", "mango", "kiwi"), colors=c("blue", "black", "red", "purple")) > print(string_list)
+print(string_list $colors)
+
+B) Write an R program to demonstrate use of various string manipulation
+functions. [Hint :paste(), print(), no quote(), format(), cat(),to String(), sprint()]
+1]paste()
+ string1<-"Payal"
+ string2<-"salunke"
+
+ string<-paste (string1, string2, sep="")
+print(string)
+
+2]print()
+string1<- "Payal"
+ print(string1)
+)
+ string1<-"payal"
+ string2<-"salunke"
+ noquote_string<-noquote (paste (string1, string2))
+ print (noquote_string)
+
+4]format()
+string<-format(Sys.time(), format = "%Y-%m-%d %H:%M:%S") 
+ print(string)
+5]cat()
+ string1<-"Hello"
+ string2<-"world"
+ cat (string1, string2,"\n")
+Hello world
+6]to string()
+to_string<-tostring(c("apple", "banana", "mango"))
+print(to_string)
+7] sprint()
+ x1<-"payal"
+x2<-"salunke"
+sprintf(" %s to %s", x1, x2)

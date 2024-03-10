@@ -1,0 +1,104 @@
+a. Write an R program to implement
+i. Normal Distribution. [Hint:dnorm(),pnorm(),qnorm(),rnorm()] dnorm()
+Code:
+ #Normal Distribution
+ x<-seq(0,4,by=0.1)
+print(x)
+ y<-dnorm(x, mean(x), sd(x))
+ plot(x,y,xlab="x axis", ylab="y axis",col="blue", type="line")|
+Ouput:
+#Normal Distribution
+ x<-seq(0,4,by=0.1)
+ print(x)
+y<-dnorm(x, mean(x), sd(x))
+ plot(x,y,xlab="x axis", ylab="y axis", col="blue", type="line")
+Graph:
+
+pnorm()
+Code:
+x<-seq(0,4,by=0.1)
+ print(x)
+ y<-pnorm(x, mean(x),sd(x))
+ plot(x,y,xlab="x axis", ylab="y axis", col="red", type="line")|
+Ouput:
+x<-seq(0,4,by=0.1)
+ print(x)
+ y<-pnorm(x, mean(x), sd(x))
+ plot(x,y, xlab="x axis", ylab="y axis", col="red", type="line")
+Graph:
+
+rnorm()
+Code:
+x<-seq(0,4,by=0.1)
+ print(x)
+ y<-rnorm(x, mean(x), sd(x))
+ plot(x,y,xlab="x axis", ylab="y axis", col="purple", type="line")
+Output:
+x<-seq(0,4,by=0.1)
+ print(x)
+ y<-rnorm(x, mean(x), sd(x))
+ plot(x,y,xlab="x axis", ylab="y axis", col="purple", type="line")
+GRAPH:
+
+qnorm()
+Code:
+ x<-seq(0,4,by=0.1)
+ print(x)
+y<-qnorm(x, mean(x), sd(x))
+plot(x,y,xlab="x axis", ylab="y axis",col="brown", type="line")
+Ouput:
+ x<-seq(0,4, by=0.1)
+ print(x)
+ y<-qnorm(x, mean(x), sd(x))
+Warning message:
+In qnorm(x, mean(x), sd(x)): NaNs produced
+ plot(x,y,xlab="x axis", ylab="y axis", col="brown", type="line")
+GRAPH:
+
+ii. Binomial Distribution:[Hint:dbinom(),pbinom(),qbinom(),rbinom()]
+pbinom()
+Code:
+ #Binomial Distribution
+ pbinom(3,size=13, prob=1/6)
+ plot (0:10,pbinom (0:10,size=10, prob=1/6), type="1")|
+Ouput:
+ #Binomial Distribution
+ pbinom(3,size=13,prob=1/6)
+ plot (0:10, pbinom (0:10,size=10,prob=1/6),type="1")
+Graph:
+dbinom()
+Code:
+ dbinom(3,size=13, prob=1/6)
+ probabilities<-dbinom (x=c(0:10), size=10, prob=1/6)
+ plot (0:10, probabilities, type="1")
+Ouput:
+ dbinom(3,size=13,prob=1/6)
+probabilities<-dbinom (x=c(0:10), size=10, prob=1/6) > plot (0:10, probabilities, type="1")
+Graph:
+qbinom()
+Code:
+ qbinom (0.8419226,size=13, prob=1/6)
+ x<-seq(0,1,by=0.1)
+ y<-qbinom (x,size=13, prob=1/6)
+plot(x,y,type="1")|
+Ouput:
+qbinom(0.8419226,size=13,prob=1/6)
+ x<-seq(0,1,by=0.1)
+y<-qbinom(x,size=13, prob=1/6) > plot(x,y,type="1")
+Graph:
+rbinom()
+Code:
+ rbinom (8,size=13, prob=1/6)
+ hist (rbinom (8,size=13, prob=1/6))
+Output:
+rbinom(8,size=13, prob=1/6)
+hist (rbinom(8,size=13,prob=1/6))
+Graph:
+b. Write an R program to perform time-series analysis for the given data.
+Code:
+ rain <- scan ("http://robjhyndman.com/tsdldata/hurst/precip1.dat", skip=1)
+ rainseries <- ts (rain, start=c(1813))
+ plot.ts(rainseries)
+Output:
+rain <- scan("http://robjhyndman.com/tsdldata/hurst/precip1.dat", skip=1) Read 100 items > rainseries <- ts (rain, start=c(1813)) > plot.ts (rainseries)
+Graph:

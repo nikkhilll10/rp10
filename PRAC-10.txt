@@ -1,0 +1,18 @@
+> #ad the microbenchmark package
+> install.packages("microbenchmark")
+Error in install.packages: Updating loaded packages
+> library(microbenchmark)
+>
+# Define a function to measure its performance
+> my function <- function(n) {
+sum(1:n)
+}
+> mb_result <- microbenchmark(
+Measure the performance of the function using microbenchmark
+my_function(100),
+my_function(1000),
+my_function(10000).
+times 100
+)
+> Print the results
+> print(mb_result)

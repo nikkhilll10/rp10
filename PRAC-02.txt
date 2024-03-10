@@ -1,0 +1,83 @@
+a. Write an R program to manage data and exhibit operations on it using List datastructure.
+L<-list('orange', c(213,28), TRUE, 51.23) > print(L)
+
+L<-list(c('Ajay', 'Vijay'), + + c('23,26,54'), c('Apple','mango', 'banana')) > names (L)<-c("name", "age","fruits") > print (L$fruits)
+
+Manipulating list:
+Merge list:
+ L1<-list(1,2,3,4) > L2<-list(2,6,5,8)
+mylist<-c(L1,L2)
+ print(mylist)
+
+
+b. Write an R program to manage data and exhibit operations on it using DataFrames.
+cars<-data.frame(name=c("BMW","Audi", "Skoda"),
+color=c("red", "blue", "green"), year=c(2012,2020,2016))
+print (cars)
+name color year
+BMW
+red 2012
+
+Skoda green 2016
+
+blue 2020
+
+ Audi
+Extracting dataframe database)specific column:(
+cars<-data.frame(name=c("BMW", "Audi", "Skoda"),
+color=c("red", "blue", "green"),
+year=c(2012,2020,2016)) > #extracting dataframe database (specific coloum)
+cars1<-data.frame(cars $name,cars$color, cars $year)
+ print (cars1)
+
+Adding new column in dataframe:
+cars<-data.frame(name=c("BMW", "Audi", "Skoda"),
+color=c("red", "blue", "green"), year=c(2012,2020,2016))
+ #adding new column in dataframe
+ cars $version<- c("GT","SUV", "Sedan")
+ print(cars)
+
+c.Write an R program to demonstrate the use of:
+i.user-defined functions
+ii.built-in numeric function, character functions etc.
+1.user-defined functions
+Ex.1
+ areaofCircle = function (radius) {
+ area = pi*radius^2
+ return (area)
+ }
+
+print(areaofcircle(2))
+Ex.2
+evenodd = function(x)
+ {
+
+if (x %% 2 == 0)
+
+return("even")
+ else
+
+ }
+return("odd")
+
+ print (evenodd (4))
+print (evenodd (3))
+ii.built-in numeric function, character functions etc.
+ex.1
+ print(sum(4:6))
+ print(max(4:6))
+ print(min(4:6))
+Ex.2
+a<-2
+b<-5
+average<-function(a,b)
+ {
+ avg=(a+b)/2
+ return(avg)
+}
+▷ average(a,b)
+
+Ex.3
+print(seq(32,44))
+ print(sum(41:68))
+

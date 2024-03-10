@@ -1,0 +1,54 @@
+a) Write an R program to apply built-in statistical functions. [Hint: mean
+median,standard deviation and others]
+1.Mean:
+x<-c(20,15,16,8,26,30) 2 mean (x, trim=0,na.rm=FALSE)
+Ouput of Mean:
+x<-c(20,15,16,8,26,30) > mean(x, trim=0,na.rm=FALSE)
+
+2.Median:
+x<-c(20,15,16,8,26,30) median(x,na.rm=FALSE)
+
+Ouput of Median:
+x<-c(20,15,16,8,26,30) > median(x, na.rm=FALSE)
+
+3.Standard Deviation:
+x<-c(20,15,16,8,26,30)
+sd(x,na.rm=FALSE)
+
+Output of Standard Deviation:
+x<-c(20,15,16,8,26,30) > sd(x,na.rm=FALSE)
+
+
+4.Mode:
+getmode<-function(v)
+{
+uniqv<-unique (v)
+uniqv [which.max(tabulate (match(v, uniqv)))]
+}
+v<-c(2,3,3,4,4,1,2,3)
+r<-getmode (v)
+print (r)
+
+Ouput of Mode:
+getmode<-function(v)
+{
+uniqv<-unique (v)
+uniqv [which.max(tabulate (match(v, uniqv)))]
+}
+v<-c(2,3,3,4,4,1,2,3)
+ r<-getmode (v)
+ print (r)
+
+b)Write an R program to demonstrate Linear and Multiple Regression analysis.
+Code:
+ v<-c(23,45,66,56)
+ u<-c(2,3,5,6)
+ s<-data.frame (u=4)
+ r<-1m(v~u)
+ print (r)
+result<-predict (r,s)
+plot (v,xlab="height", ylab="weight", main="height weight", name. arg-u,col="red", type="line")
+print (result)
+Ouput of linear and multiple regression analysis:
+ print (result)
+GRAPH:
